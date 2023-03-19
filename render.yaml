@@ -249,7 +249,7 @@ services:
           name: temporaldb
           property: host
   - name: temporal-ui
-    type: pserv
+    type: web
     autoDeploy: false
     plan: Starter
     region: ohio
