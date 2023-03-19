@@ -266,6 +266,7 @@ services:
           name: temporal-frontend
           type: pserv
           property: host
+
   # For secure external access to the Temporal Workflow Service via REST
   # See https://github.com/render-examples/temporal-rest-proxy
   # - type: web
