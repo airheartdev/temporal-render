@@ -251,13 +251,14 @@ services:
   - name: temporal-ui
     type: web
     autoDeploy: true
+    healthCheckPath: /
     plan: Starter
     region: ohio
     env: docker
     dockerfilePath: ./temporal-cluster/ui/Dockerfile
     envVars:
       - key: PORT
-        value: 8088
+        value: 8080
       - key: TEMPORAL_PERMIT_WRITE_API
         value: true
       - key: TEMPORAL_GRPC_HOST
