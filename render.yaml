@@ -20,8 +20,8 @@ envVarGroups:
         value: postgresql
 
 services:
-  - type: pserv
-    name: temporal-elasticsearch
+  - name: temporal-elasticsearch
+    type: pserv
     autoDeploy: false
     plan: Starter
     region: ohio
@@ -50,8 +50,8 @@ services:
         value: 128mb
       - key: discovery.type
         value: single-node
-  - type: pserv
-    name: temporal-frontend
+  - name: temporal-frontend
+    type: pserv
     autoDeploy: false
     plan: Starter
     region: ohio
@@ -100,8 +100,8 @@ services:
         fromDatabase:
           name: temporaldb
           property: host
-  - type: pserv
-    name: temporal-history
+  - name: temporal-history
+    type: pserv
     autoDeploy: false
     plan: Starter
     region: ohio
@@ -147,8 +147,8 @@ services:
         fromDatabase:
           name: temporaldb
           property: host
-  - type: pserv
-    name: temporal-matching
+  - name: temporal-matching
+    type: pserv
     autoDeploy: false
     plan: Starter
     region: ohio
@@ -194,9 +194,9 @@ services:
         fromDatabase:
           name: temporaldb
           property: host
-  - type: pserv
+  - name: temporal-worker
+    type: pserv
     autoDeploy: false
-    name: temporal-worker
     plan: Starter
     region: ohio
     env: docker
@@ -248,8 +248,8 @@ services:
         fromDatabase:
           name: temporaldb
           property: host
-  - type: pserv
-    name: temporal-ui
+  - name: temporal-ui
+    type: pserv
     autoDeploy: false
     plan: Starter
     region: ohio
