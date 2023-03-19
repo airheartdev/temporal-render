@@ -250,7 +250,7 @@ services:
           property: host
   - name: temporal-ui
     type: web
-    autoDeploy: false
+    autoDeploy: true
     plan: Starter
     region: ohio
     env: docker
